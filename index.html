@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <div class='player1'>
+    <img id="img1" src="">
+  </div>
+  
+  <div class="player2">
+  <img id="img2" src="">  
+  </div>
+  <h1 id="result">Result:</h1>
+</body>
+  <script>
+  const images=["dice1.png"
+              ,"dice2.png",
+              "dice3.png",
+             "dice4.png",
+             "dice5.png",
+             "dice6.png"]
+const r1=Math.floor(Math.random()*images.length)
+const r11=document.getElementById('img1').src=images[r1]
+
+const r2=Math.floor(Math.random()*images.length)
+const r21=document.getElementById('img2').src=images[r2]
+if(r1===r2){
+  document.getElementById('result').innerHTML = "Draw";
+}
+else if(r1>r2){
+   document.getElementById('result').innerHTML = "P1 is winner";
+}
+else{
+  document.getElementById('result').innerHTML = "P2 is winner";
+}
+
+          </script>
+</html>
